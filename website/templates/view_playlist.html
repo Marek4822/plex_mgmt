@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block title %}Update{% endblock %} {% block
+  content %}
+<body style="overflow: auto">
+<h1>View page</h1>
+<div class="view">
+  <form method="POST">
+    <p>
+      <label for="files">View Playlists:</label>
+      <select id="playlist" name="playlist">
+        <option value="">Select your option</option>
+        {% for element in select_list %}
+
+        <option value="{{ element }}">{{ element }}</option>
+        {% endfor %}
+      </select>
+    </p>
+    <p><label for="files">Total playlists: {{ count_dir }}</label></p>
+
+    <button type="submit">View</button>
+  </form>
+</div>
+
+
+{% if count_file %}
+<p>Total songs: {{ count_file }}</p>
+{% endif %} {% for file_name in file_list %}
+<p>{{ file_name }}</p>
+{% endfor %} {% endblock %}
+</body>

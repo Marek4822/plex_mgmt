@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<h1>Plex Management Server</h1>
+<div class="links">
+  <!-- <a class="link" href="/update_old">Update</a> -->
+  <br />
+  <a class="link" href="/update">Update</a>
+  <br />
+  <a class="link" href="/update_old">Update_old</a>
+  <br />
+  <a class="link" href="/view_playlist">View</a>
+  <br />
+  <a class="link">Refresh</a>
+</div>
+<script type="text/javascript" src="static/refreshPlex.js"></script>
+{% endblock %}
